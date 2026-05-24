@@ -1,0 +1,17 @@
+{
+  "socketPath": "\\\\.\\pipe\\mcp-cdd5131e-de92-4077-a2b9-f6017d0678d8.sock",
+  "scheme": "pipe",
+  "headers": {
+    "Authorization": "Nonce 2962c075-0b5e-4dd2-942f-19f8eae5ca72"
+  },
+  "pid": 30864,
+  "ideName": "Visual Studio Code",
+  "timestamp": 1779654232830,
+  "workspaceFolders": [
+    "c:\\Users\\athos\\Downloads\\Projeto_Linguagem_de_Marcacao_REGULASUS-main",
+    "c:\\Users\\athos\\Downloads\\regulasus_pro_site_v4\\regulasus_pro\\assets",
+    "c:\\Users\\athos\\Downloads\\regulasus_pro_site_v4\\regulasus_pro\\css",
+    "c:\\Users\\athos\\Downloads\\regulasus_pro_site_v4\\regulasus_pro\\js"
+  ],
+  "isTrusted": true
+}
