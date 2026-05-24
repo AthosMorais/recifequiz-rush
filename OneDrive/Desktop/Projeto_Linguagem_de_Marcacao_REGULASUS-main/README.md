@@ -1,0 +1,213 @@
+﻿# 🏥 REGULASUS
+
+## Sistema de Gerenciamento de Disponibilidade de Vagas para Consultas Eletivas
+
+REGULASUS é um frontend funcional para simular o fluxo de regulação de saúde no SUS: cadastro de pacientes, encaminhamentos, fila de espera, agendamentos e dashboard.
+
+## 📑 Sumário
+
+- [Objetivo do Projeto](#-objetivo-do-projeto)
+- [O que já está implementado](#-o-que-já-está-implementado)
+- [Resumo da documentação](#-resumo-da-documentação-do-projeto)
+- [Começando](#-começando)
+- [Testes](#-testes)
+- [Estrutura do projeto](#-estrutura-do-projeto)
+- [Funcionalidades principais](#-funcionalidades-principais)
+- [Observações](#-observações)
+- [Contribuições](#-contribuições)
+- [Próximos passos sugeridos](#-próximos-passos-sugeridos)
+
+---
+
+## 🎯 Objetivo do Projeto
+
+- Gerenciar o fluxo de pacientes desde a UBS até hospitais e centros especializados.
+- Permitir cadastro de pacientes, emissão e regulação de encaminhamentos, aprovação/rejeição e agendamentos.
+- Exibir indicadores de ocupação e organização de filas.
+- Fornecer um protótipo de interface com lógica de navegação, modais e notificações.
+
+---
+
+## ✅ O que já está implementado
+
+- Interface completa em `src/index.html`
+- Estilos responsivos em `src/styles.css`
+- Lógica de navegação, formulário e dados em `src/main.js`
+- Dashboard, pacientes, encaminhamentos, agendamentos e fila de espera
+- Notificações tipo toast
+- Filtragem de encaminhamentos por status e prioridade
+- Cadastro de paciente via modal
+- Validação de CPF e preenchimento básico
+- Testes Playwright em `tests/e2e/`
+- Workflow de CI no GitHub Actions rodando Playwright
+
+---
+
+## 📚 Resumo da documentação do projeto
+
+### Especificação de Projeto
+- Objetivo geral: controlar o fluxo de agendamentos entre UBS e centros especializados.
+- Público-alvo: médicos da UBS, equipe administrativa, reguladores, hospitais, pacientes e gestores.
+- Módulos: UBS, auditoria/regulação, gestão de vagas, pacientes e relatórios.
+- Fluxo: entrada do paciente na UBS → emissão/registro do encaminhamento → análise e regulação → fila/agendamento → notificação.
+- Indicadores de sucesso: redução de espera, aumento de ocupação, redução de faltas, disponibilidade do sistema.
+
+### Arquitetura de Dados
+- Entidades principais: Pacientes, Usuários, Unidades de Saúde, Especialidades, Encaminhamentos, Auditoria, Agendas, Agendamentos, Fila de Espera, Notificações.
+- Relacionamentos MER com chaves estrangeiras e índices principais.
+- Exemplo de dados de paciente e encaminhamento para teste.
+- Segurança: hashing de senhas, criptografia de dados sensíveis, logs de auditoria e backups.
+
+### Guia de Desenvolvimento
+- Convenções de código: `camelCase` para JS, `kebab-case` para CSS e `camelCase`/`data-` em IDs e atributos.
+- Arquitetura sugerida: MVC com separação de modelos, views e controladores.
+- Boas práticas de HTML semântico, CSS reutilizável, comentários e JavaScript moderno.
+- Padrões de tratamento de erros, acessibilidade e performance.
+
+### Checklist de Implementação
+- Planejamento e frontend concluídos.
+- HTML, CSS e JavaScript totalmente implementados.
+- Funcionalidades principais e design já validados em protótipo.
+- Testes funcionais e integração backend planejados como próximos passos.
+
+### Guia Rápido
+- Instruções para iniciar em minutos com `index.html` ou servidor local.
+- Estrutura mínima de pastas para copiar o projeto.
+- Recomendações de uso e exploração das páginas.
+
+---
+
+## 🚀 Começando
+
+### Requisitos
+
+- Node.js 18+
+- Navegador moderno (Chrome, Edge ou Firefox)
+
+### Instalação
+
+```bash
+git clone https://github.com/SinvalCustodio/Projeto_Linguagem_de_Marcacao_REGULASUS.git
+cd Projeto_Linguagem_de_Marcacao_REGULASUS/files
+npm install
+```
+
+### Executar localmente
+
+```bash
+npx http-server src -p 4173
+```
+
+Abra `http://127.0.0.1:4173` no navegador.
+
+---
+
+## 🧪 Testes
+
+### Executar todos os testes Playwright
+
+```bash
+npm test
+```
+
+### Executar E2E em modo visível
+
+```bash
+npm run test:e2e:headed
+```
+
+### Abrir relatório HTML do Playwright
+
+```bash
+npm run test:e2e:report
+```
+
+---
+
+## 🧩 Estrutura do projeto
+
+```text
+files/
+├── README.md
+├── package.json
+├── package-lock.json
+├── playwright.config.js
+├── .github/workflows/ci.yml
+├── .gitignore
+├── docs/
+│   ├── 01_ESPECIFICACAO_PROJETO.md
+│   ├── 02_ARQUITETURA_DADOS.md
+│   ├── 03_GUIA_DESENVOLVIMENTO.md
+│   ├── CHECKLIST_IMPLEMENTACAO.md
+│   ├── GUIA_RAPIDO.md
+│   └── SUMARIO_EXECUTIVO.md
+├── src/
+│   ├── index.html
+│   ├── styles.css
+│   └── main.js
+└── tests/
+    └── e2e/
+        ├── app.spec.js
+        └── unit.spec.js
+```
+
+---
+
+## 🌟 Funcionalidades principais
+
+### Dashboard
+- Indicadores de encaminhamentos
+- Fila de espera e ocupação
+- Ações rápidas de navegação
+
+### Pacientes
+- Busca por nome, CPF e email
+- Cadastro de novos pacientes
+- Exibição em tabela
+
+### Encaminhamentos
+- Cards com status e prioridade
+- Aprovar, rejeitar e solicitar informação
+- Filtros dinâmicos
+
+### Agendamentos
+- Formulário completo
+- Agendamento com data, horário e local
+- Confirmação com notificação
+
+### Fila de Espera
+- Lista visual de prioridades
+- Tempo em fila
+- Ações de agendamento rápido
+
+---
+
+## 📌 Observações
+
+- O projeto está preparado para evolução com backend real.
+- A documentação em `docs/` detalha visão, arquitetura, desenvolvimento e roadmap.
+- O `README` agora resume todo o conteúdo essencial do projeto.
+
+---
+
+## 🤝 Contribuições
+
+1. Faça um fork do projeto
+2. Crie uma branch de feature
+3. Faça commits claros
+4. Abra um Pull Request
+
+---
+
+## 🚀 Próximos passos sugeridos
+
+- Integrar backend e API REST
+- Implementar autenticação e controle de acesso
+- Adicionar notificações reais (email/SMS/WhatsApp)
+- Melhorar relatórios e dashboards
+- Incluir dark mode e multilíngue
+
+---
+
+**Última atualização:** Maio 2026
+

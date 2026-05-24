@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Mar 30 16:04:14 BRT 2024
+org.eclipse.persistence.moxy-4.0.2.jar>central=
+org.eclipse.persistence.moxy-4.0.2.pom>central=

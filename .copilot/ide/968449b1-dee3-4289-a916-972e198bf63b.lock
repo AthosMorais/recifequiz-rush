@@ -1,0 +1,14 @@
+{
+  "socketPath": "\\\\.\\pipe\\mcp-8e6db2a2-ceb5-4783-82fe-809cab9950f0.sock",
+  "scheme": "pipe",
+  "headers": {
+    "Authorization": "Nonce 4c2d27ef-1b09-485c-909d-326788aea3ae"
+  },
+  "pid": 11416,
+  "ideName": "Visual Studio Code",
+  "timestamp": 1779651125277,
+  "workspaceFolders": [
+    "c:\\Users\\athos\\OneDrive\\Desktop\\Projeto_Linguagem_de_Marcacao_REGULASUS-main"
+  ],
+  "isTrusted": true
+}
